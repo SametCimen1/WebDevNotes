@@ -9,18 +9,76 @@
       rel="stylesheet"
     />
     <style>
+      *{
+        padding:0;
+        margin: 0;
+      }
       body {
         font-family: "Sono", sans-serif;
       }
 
-      /* Hint: What can you do with a media query and flexbox? */
-      @media (max-width: 1250px) {
+      .pricing-container{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
+
+      .pricing-plan{
+        background-color: #f2f2f2;
+        margin: 2rem;
+        width: 33.3%;
+        padding:50px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+
+      li{
+        list-style: none;
+        margin-top: 0.5rem;
+      }
+
+      .plan-title, .plan-price{
+        font-weight: bold;
+      }
+
+      .plan-price{
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
+
+      button{
+        background-color: #ff6600;
+        border:0;
+        padding:10px;
+        margin-top: 1rem;
+        border-radius: 5px;
+        color: white;
+      }
+
+      @media (max-width: 1250px) {
+        .pricing-container{
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .pricing-plan{
+          width: 50%;
+          margin-top: 3rem;
+        }
+      }
+
+
+
     </style>
   </head>
 
   <body>
     <div class="pricing-container">
+      
       <div class="pricing-plan">
         <div class="plan-title">Basic</div>
         <div class="plan-price">$9.99/month</div>
@@ -31,6 +89,7 @@
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
+
       <div class="pricing-plan">
         <div class="plan-title">Standard</div>
         <div class="plan-price">$19.99/month</div>
@@ -41,6 +100,7 @@
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
+      
       <div class="pricing-plan">
         <div class="plan-title">Premium</div>
         <div class="plan-price">$49.99/month</div>
@@ -51,6 +111,7 @@
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
+
     </div>
   </body>
 </html>
